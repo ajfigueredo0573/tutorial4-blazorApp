@@ -2,13 +2,14 @@
 
 <h1>IPO</h1>
 
-<p>Input prompt </p>
+<p>This program will multiple the number inputed by 5 and return the result </p>
+<p>Input a number: </p>
 
 <input @bind="InputString "/>
 
-<button class="btn btn-primary" @onclick="DoProcessing">Do it</button>
+<button class="btn btn-primary" @onclick="DoProcessing">Calculate</button> 
 
-<p>Output: @OutputString </p>
+<p>The result of @InputString * 5 = @OutputString </p>
 
 @code
 

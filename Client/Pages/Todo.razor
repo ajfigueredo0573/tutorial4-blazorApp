@@ -1,0 +1,31 @@
+﻿@page "/todo"       
+
+<h1>To-do list (@todos.Count(todo => !todo.IsDone))</h1>          <!-- Ceader of the page -->
+                                                                  <!-- Counter that keeps track of the items in the list-->
+
+<ul>
+    @foreach (var todo in todos)                                @*loop to render each todo item as a list item*@
+    {
+        <li>
+            <input type="checkbox" @bind="todo.IsDone" />       <!-- Creates button to check the items in the list that are completed-->
+            <input @bind="todo.Title" />                        <!-- This instruction affects the counter in the header-->
+        </li>
+    }
+</ul>
+
+<input placeholder="Something to-do" @bind="newTodo" />     <!-- Text inside button -->
+<button @onclick="AddTodo">Add todo</button>                <!-- Creation of button that adds task to list -->
+
+@code {
+    private List<TodoItem> todos = new();                   // field for the to-do items            
+    private string newTodo;                                 // gets the title of the new todo item
+
+    private void AddTodo()                                  // method to the Todo component and register the method for the button using the @onclick attribute
+    {
+    if (!string.IsNullOrWhiteSpace(newTodo))
+    {
+    todos.Add(new TodoItem { Title = newTodo });            // add new item to list
+    newTodo = string.Empty;                                 // clear the value of the text input
+    }
+    }
+    }
