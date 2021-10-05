@@ -26,7 +26,7 @@ Once I cloned the project, I opened the solution in [Visual Studio Code](https:/
 
 ## Reference Links
 
-- IPO code from [Blazor](https://sites.google.com/site/profvanselow/programming/languages/c_1/blazo)
+- IPO code from [Blazor](https://sites.google.com/site/profvanselow/programming/languages/c_1/blazor)
 - To Do list added from tutorial at [Build a Blazor todo list app](https://docs.microsoft.com/en-us/aspnet/core/tutorials/build-a-blazor-app)
 
 ## Special Notes
